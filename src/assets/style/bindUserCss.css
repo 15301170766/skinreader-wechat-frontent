@@ -19,7 +19,7 @@ input:focus{
 .form input::placeholder{
     color: rgba(255,255,255,0.8);
     font-size: 18px;
-    font-family: "neo";
+
 }
 .confirm{
     height: 0;

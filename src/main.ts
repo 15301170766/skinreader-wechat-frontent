@@ -11,7 +11,11 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import VueApollo from 'vue-apollo';
+import FormMaking from 'form-making'
+import 'form-making/dist/FormMaking.css'
+import wx from 'weixin-js-sdk';
 import api from './api';
+
 const httpLink = new HttpLink({
     // You should use an absolute URL here
     uri: api.graphql,
@@ -29,7 +33,7 @@ const apolloProvider = new VueApollo({
 });
 
 Vue.use(ElementUI);
-
+Vue.use(FormMaking);
 Vue.config.productionTip = false;
 
 new Vue({
