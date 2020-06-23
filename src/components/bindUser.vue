@@ -24,8 +24,11 @@
                     </div>
                    <el-form :rules="rules" ref="form" :model="form" label-width="0px">
                     <el-form-item  prop="phone" style="height: 55px">
+                            <p class="form form1">
+                                <el-input class="form_input" style="font-family: inherit" v-model="form.name" placeholder="请输入用户名"></el-input>
+                            </p>
                             <p class="form">
-                            <el-input class="form_input" style="font-family: inherit" v-model="form.phone" placeholder="请输入手机号"></el-input>
+                                <el-input class="form_input" style="font-family: inherit" v-model="form.phone" placeholder="请输入手机号"></el-input>
                             </p>
                     </el-form-item>
 
@@ -322,7 +325,7 @@
         font-size: 18px;
         position: relative;
         left: 30%;
-        top: 10px;
+        top: 80px;
     }
     .btn:hover{
         background: rgba(255,255,255,.25);
@@ -551,5 +554,8 @@
             width: 290px;
             margin-right: -145px;
         }
+    }
+    .form1{
+        margin-bottom: 20px;
     }
 </style>
