@@ -20,6 +20,16 @@ export default new Router({
           name: 'bindUser',
           component: () => import('./components/bindUser.vue'),
         },
+        {
+          path: '/findInfo',
+          name: 'findInfo',
+          component: () => import('./components/findInfo.vue'),
+        },
+        {
+          path: '/editInfo',
+          name: 'editInfo',
+          component: () => import('./components/editInfo.vue'),
+        },
       ],
     }, {
             path: '/showTemplate',
