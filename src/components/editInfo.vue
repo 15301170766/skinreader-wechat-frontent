@@ -277,10 +277,10 @@
                        variables: isBindVariables,
                    });
 
-                   if (isBind.data.getIsBind == true){
-                       this.warningTitle = '您已经进行过信息绑定'
-                       this.showExitModal();
-                   }
+                  //  if (isBind.data.getIsBind == true){
+                  //      this.warningTitle = '您已经进行过信息绑定'
+                  //      this.showExitModal();
+                  //  }
 
                    this.sginWexinsdk();
 
