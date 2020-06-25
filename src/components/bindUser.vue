@@ -24,9 +24,9 @@
                     </div>
                    <el-form :rules="rules" ref="form" :model="form" label-width="0px">
                     <el-form-item  prop="phone" style="height: 55px">
-                            <p class="form form1">
+                            <!-- <p class="form form1">
                                 <el-input class="form_input" style="font-family: inherit" v-model="form.name" placeholder="请输入用户名"></el-input>
-                            </p>
+                            </p> -->
                             <p class="form">
                                 <el-input class="form_input" style="font-family: inherit" v-model="form.phone" placeholder="请输入手机号"></el-input>
                             </p>
@@ -50,7 +50,7 @@
                 :close-on-click-modal="false"
                 width="77%"
                 >
-            <span>您已绑定成功，页面将在{{time}}秒后自动退出</span>
+            <span>{{warningTitle}}，页面将在{{time}}秒后自动退出</span>
             <span slot="footer" class="dialog-footer">
     <el-button style="height: 30px;width: 55px" type="primary" @click="dialogVisible = false">确 定</el-button>
   </span>
@@ -68,6 +68,7 @@
         name: '',
         data() {
             return {
+                warningTitle:"您已绑定成功",
                 time:3,
                 dialogVisible:false,
                 rules:{
@@ -243,6 +244,7 @@
                    });
 
                    if (isBind.data.getIsBind == true){
+                       this.warningTitle = '您已经进行过信息绑定'
                        this.showExitModal();
                    }
 
