@@ -102,10 +102,11 @@
                         that.dialogVisible = false;
                         //去掉定时器的方法
                         clearInterval(intervalTime);
-
+                        wx.miniProgram.navigateTo({url: '/pages/packageA/pages/ChatFree/main'})
                         //下面weixin退出去方法
-                        wx.closeWindow();
-
+                        // wx.closeWindow();
+                        wx.miniProgram.postMessage({ data: {foo: 'bar'} })
+                        // wx.miniProgram.getEnv(function(res) { console.log(res.miniprogram) })
                     }
                 },1000);
 
