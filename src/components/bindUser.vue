@@ -60,6 +60,7 @@
 
     </div>
 </template>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
 <script>
     import gql from 'graphql-tag';
     import jsonp from 'jsonp';
@@ -93,6 +94,7 @@
             showExitModal(){
                 this.dialogVisible = true;
                 let that = this;
+                this.$message("正在跳转会话请稍等")
                let intervalTime = setInterval(function (){
                    console.log(that.time)
                     if (that.time >1){
